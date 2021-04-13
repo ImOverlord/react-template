@@ -1,5 +1,5 @@
-import React, { ComponentType as ReactComponent, FunctionComponent } from "react";
-import { Redirect, Route, RouteProps, RouteComponentProps } from "react-router"
+import { FunctionComponent } from "react";
+import { Redirect, Route, RouteProps, RouteComponentProps } from "react-router";
 
 
 export const ProtectedRoute: FunctionComponent<RouteProps> =
@@ -11,7 +11,7 @@ export const ProtectedRoute: FunctionComponent<RouteProps> =
             isAuthentified() ?
             <Route
                 {...props}
-                render={(props: RouteComponentProps<{}>) => <Component {...props} />}
+                render={(props: RouteComponentProps) => <Component {...props} />}
             /> :
             <Redirect to='/invalid'></Redirect>
         );
@@ -25,4 +25,4 @@ export const ProtectedRoute: FunctionComponent<RouteProps> =
  */
 const isAuthentified = () => {
     return false;
-}
+};

@@ -6,7 +6,7 @@ My typescript React template I use for my projects
  - TypeScript
  - Router
  - ProtectedRoute
-
+ - Eslint
 ## Todo when using the template
 
  - Update Protected Route

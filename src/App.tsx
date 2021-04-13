@@ -3,12 +3,12 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import { HomePage } from './Pages/Home'
+import { HomePage } from './Pages/Home';
 import './App.css';
 import { ProtectedRoute } from './Components/ProtectedRoute';
 import { InvalidPage } from "./Pages/Invalid";
 
-function App() {
+function App(): JSX.Element {
     return (
         <Router>
             <Switch>
