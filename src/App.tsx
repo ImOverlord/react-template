@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+import { HomePage } from './Pages/Home'
 import './App.css';
+import { ProtectedRoute } from './Components/ProtectedRoute';
+import { InvalidPage } from "./Pages/Invalid";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route path='/invalid' component={InvalidPage}></Route>
+                <ProtectedRoute path='/' component={HomePage}/>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
