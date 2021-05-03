@@ -4,7 +4,7 @@ import {
     Route
 } from "react-router-dom";
 import { HomePage } from './Pages/Home';
-import './App.css';
+import './App.scss';
 import { ProtectedRoute } from './Components/ProtectedRoute';
 import { InvalidPage } from "./Pages/Invalid";
 
